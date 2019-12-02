@@ -1,5 +1,5 @@
 <?php
-require_once __DIR__ . '../Session/vendor/autoload.php';
+require_once __DIR__ . '../vendor/autoload.php';
 
 //variables
   $patente = $_GET["patente"];
