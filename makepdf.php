@@ -7,9 +7,7 @@ require_once __DIR__ . '/vendor/autoload.php';
 
   include '/funciones/accesoadatos.php';
 
-  $cantidadAutos=0;
-  $totalFacturado = 0;
-  date_default_timezone_set('America/Argentina/Buenos_Aires');
+  
 
 
 
@@ -25,10 +23,10 @@ require_once __DIR__ . '/vendor/autoload.php';
   
 
 //variables
-   		$patente = $_POST["patente"];
-          $cobrar = $_POST['importe'];
-          $ingreso = $_POST['horaingreso'];
-          $salida = $_POST['horasalida'];
+   		$patente = $_GET["patente"];
+          $cobrar = $_GET['importe'];
+          $ingreso = $_GET['horaingreso'];
+          $salida = $_GET['horasalida'];
 
 //instancia pdf
   $mpdf = new \Mpdf\Mpdf();
