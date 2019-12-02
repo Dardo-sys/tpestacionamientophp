@@ -5,6 +5,41 @@ require_once __DIR__ . '/vendor/autoload.php';
 
  
 
+  include '../funciones/accesoadatos.php';
+
+  $cantidadAutos=0;
+  $totalFacturado = 0;
+  date_default_timezone_set('America/Argentina/Buenos_Aires');
+
+
+
+  $objetoAccesoDato = AccesoDatos::dameUnObjetoAcceso(); 
+  $consulta =$objetoAccesoDato->RetornarConsulta("select patente  , horaingreso, horasalida,importe  from vehiculosfacturados");
+  $consulta->execute();     
+  $datos= $consulta->fetchAll(PDO::FETCH_ASSOC);
+
+    
+    foreach ($datos as $vehiculosfacturados)
+    {
+     
+
+      echo "<tr>";
+        echo "<td>".$vehiculosfacturados['patente']."</td>   <td>".$vehiculosfacturados['horaingreso']."</td>   <td>".$vehiculosfacturados['horasalida']."</td>   <td>".$vehiculosfacturados['importe']."</td>";
+        echo "</tr>";
+        
+
+
+        $totalFacturado = $totalFacturado + $vehiculosfacturados['importe'];
+        $cantidadAutos = $cantidadAutos + 1;
+        
+      
+    }
+    echo "</table>";
+ ;
+    echo "<h5> TOTAL FACTURADO: $".$totalFacturado."</h5>";
+    
+  
+
 //variables
    		$patente = $_POST["patente"];
           $cobrar = $_POST['cobrar'];
