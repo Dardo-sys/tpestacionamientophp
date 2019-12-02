@@ -36,6 +36,20 @@ session_start();
          
       <form action="makepdf.php" method="post"> 
 
+        <form action="hacerfacturar.php"> 
+
+      <h1>Cobrar</h1>
+
+      <?php
+
+          date_default_timezone_set('America/Argentina/Buenos_Aires');
+        
+          $patente = $_POST["patente"];
+          $cobrar = $_POST['cobrar'];
+          $ingreso = $_POST['ingreso'];
+          $salida = $_POST['salida'];
+       
+?>
      
             <br>
             <br>

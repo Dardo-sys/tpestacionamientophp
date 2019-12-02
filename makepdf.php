@@ -1,27 +1,15 @@
 <?php
 require_once __DIR__ . '/vendor/autoload.php';
 //require_once __DIR__ . '/composer/autoload_real.php';
-?>
-
-<main role="main" class="container">
 
 
- <form action="hacerfacturar.php"> 
+ 
 
-      <h1>Cobrar</h1>
-
-      <?php
-
-          date_default_timezone_set('America/Argentina/Buenos_Aires');
-        
-          $patente = $_POST["patente"];
+//variables
+   		$patente = $_POST["patente"];
           $cobrar = $_POST['cobrar'];
           $ingreso = $_POST['ingreso'];
           $salida = $_POST['salida'];
-
-
-//variables
-
 
 //instancia pdf
   $mpdf = new \Mpdf\Mpdf();
