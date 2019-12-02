@@ -34,9 +34,9 @@ session_start();
          
 <div class="container">
          
-      <form action="makepdf.php" method="post"> 
+       
 
-        <form action="hacerfacturar.php" method="get"> 
+        <form action="hacerfacturar.php"> 
 
       <h1>Cobrar</h1>
 
@@ -48,6 +48,11 @@ session_start();
           $cobrar = $_GET['cobrar'];
           $ingreso = $_GET['ingreso'];
           $salida = $_GET['salida'];
+
+           echo "Vehiculo: ".$patente."<br>";
+          echo "Hora de ingreso: ".date("d-m-y H:i",$ingreso)."<br>";
+          echo "Hora de salida: ".date("d-m-y H:i",$salida)."<br>";
+          echo "Cobrar: $".$cobrar."<br>";
        
 ?>
      
