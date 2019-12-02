@@ -33,7 +33,7 @@ session_start();
     <main role="main" class="container">
          
       <form action="hacerfacturar.php"> 
-      <form action="makepdf.php" method="get"> 
+      <form action="makepdf.php" method="post"> 
   
 
 

@@ -14,10 +14,10 @@ require_once __DIR__ . '/vendor/autoload.php';
 
           date_default_timezone_set('America/Argentina/Buenos_Aires');
         
-          $patente = $_GET["patente"];
-          $cobrar = $_GET['cobrar'];
-          $ingreso = $_GET['ingreso'];
-          $salida = $_GET['salida'];
+          $patente = $_POST["patente"];
+          $cobrar = $_POST['cobrar'];
+          $ingreso = $_POST['ingreso'];
+          $salida = $_POST['salida'];
 
 
 //variables
