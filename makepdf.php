@@ -5,7 +5,7 @@ require_once __DIR__ . '/vendor/autoload.php';
 
  
 
-  include '../funciones/accesoadatos.php';
+  include '/funciones/accesoadatos.php';
 
   $cantidadAutos=0;
   $totalFacturado = 0;
@@ -19,32 +19,16 @@ require_once __DIR__ . '/vendor/autoload.php';
   $datos= $consulta->fetchAll(PDO::FETCH_ASSOC);
 
     
-    foreach ($datos as $vehiculosfacturados)
-    {
-     
 
-      echo "<tr>";
-        echo "<td>".$vehiculosfacturados['patente']."</td>   <td>".$vehiculosfacturados['horaingreso']."</td>   <td>".$vehiculosfacturados['horasalida']."</td>   <td>".$vehiculosfacturados['importe']."</td>";
-        echo "</tr>";
-        
-
-
-        $totalFacturado = $totalFacturado + $vehiculosfacturados['importe'];
-        $cantidadAutos = $cantidadAutos + 1;
-        
-      
-    }
-    echo "</table>";
- ;
-    echo "<h5> TOTAL FACTURADO: $".$totalFacturado."</h5>";
+ 
     
   
 
 //variables
    		$patente = $_POST["patente"];
-          $cobrar = $_POST['cobrar'];
-          $ingreso = $_POST['ingreso'];
-          $salida = $_POST['salida'];
+          $cobrar = $_POST['importe'];
+          $ingreso = $_POST['horaingreso'];
+          $salida = $_POST['horasalida'];
 
 //instancia pdf
   $mpdf = new \Mpdf\Mpdf();
