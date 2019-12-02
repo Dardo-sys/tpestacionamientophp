@@ -1,6 +1,24 @@
 <?php
 require_once __DIR__ . '/vendor/autoload.php';
 //require_once __DIR__ . '/composer/autoload_real.php';
+?>
+
+<main role="main" class="container">
+
+
+ <form action="hacerfacturar.php"> 
+
+      <h1>Cobrar</h1>
+
+      <?php
+
+          date_default_timezone_set('America/Argentina/Buenos_Aires');
+        
+          $patente = $_GET["patente"];
+          $cobrar = $_GET['cobrar'];
+          $ingreso = $_GET['ingreso'];
+          $salida = $_GET['salida'];
+
 
 //variables
   $patente = $_POST["patente"];
