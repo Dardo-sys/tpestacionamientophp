@@ -36,7 +36,7 @@ session_start();
          
       <form action="makepdf.php" method="post"> 
 
-        <form action="hacerfacturar.php"> 
+        <form action="hacerfacturar.php" method="get"> 
 
       <h1>Cobrar</h1>
 
@@ -44,10 +44,10 @@ session_start();
 
           date_default_timezone_set('America/Argentina/Buenos_Aires');
         
-          $patente = $_POST["patente"];
-          $cobrar = $_POST['cobrar'];
-          $ingreso = $_POST['ingreso'];
-          $salida = $_POST['salida'];
+         $patente = $_GET["patente"];
+          $cobrar = $_GET['cobrar'];
+          $ingreso = $_GET['ingreso'];
+          $salida = $_GET['salida'];
        
 ?>
      
