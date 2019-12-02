@@ -33,6 +33,9 @@ session_start();
     <main role="main" class="container">
          
       <form action="hacerfacturar.php"> 
+      <form action="makepdf.php"> 
+  
+
 
       <h1>Cobrar</h1>
 
