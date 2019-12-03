@@ -3,9 +3,9 @@
 include 'accesoadatos.php';
 
 $objetoAccesoDato= AccesoDatos::dameUnObjetoAcceso();
-$con =$objetoAccesoDato->RetornarConsulta("select * from vehiculosfacturados");
-$con->execute();
-$query=$con->fetchall(PDO::FETCH_ASSOC);
+$consulta =$objetoAccesoDato->RetornarConsulta("select * from vehiculosfacturados");
+$consulta->execute();
+$datos=$consulta->fetchall(PDO::FETCH_ASSOC);
 
 ?>
 <html>
@@ -18,8 +18,8 @@ $query=$con->fetchall(PDO::FETCH_ASSOC);
 			<select name='patente'>
 				<?php
 					//show invoices list as options
-					$query = mysqli_query($con,"select * from vehiculosfacturados");
-					while($patente = mysqli_fetch_array($query)){
+					$consulta =$objetoAccesoDato->RetornarConsulta("select * from vehiculosfacturados");
+					while($patente = mysqli_fetch_array($consulta)){
 						echo "<option value='".$patente['patente']."'>".$patente['patente']."</option>";
 					}
 				?>
