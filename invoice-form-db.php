@@ -3,10 +3,7 @@
 
 $consulta = mysqli_connect('mysql:host=remotemysql.com;dbname=RV6OjRGtny;charset=utf8', 'RV6OjRGtny', 'a7BUsFJ0gQ',);
 
-$objetoAccesoDato = AccesoDatos::dameUnObjetoAcceso(); 
-  $consulta =$objetoAccesoDato->RetornarConsulta("select patente  , horaingreso, horasalida,importe  from vehiculosfacturados");
-  $consulta->execute();     
-  $datos= $consulta->fetchAll(PDO::FETCH_ASSOC);
+
 var_dump($consulta)
 ?>
 <html>
