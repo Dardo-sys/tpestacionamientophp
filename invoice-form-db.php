@@ -1,6 +1,6 @@
 <?php
 //db connection
-include 'accesoadatos.php';
+
 $consulta = mysqli_connect('mysql:host=remotemysql.com;dbname=RV6OjRGtny;charset=utf8', 'RV6OjRGtny', 'a7BUsFJ0gQ',);
 
 $objetoAccesoDato = AccesoDatos::dameUnObjetoAcceso(); 
