@@ -1,10 +1,7 @@
 <?php
 //db connection
-
-$consulta = mysqli_connect('mysql:host=remotemysql.com;dbname=RV6OjRGtny;charset=utf8', 'RV6OjRGtny', 'a7BUsFJ0gQ',);
-
-
-var_dump($consulta)
+$con = mysqli_connect('mysql:host=remotemysql.com;dbname=RV6OjRGtny;charset=utf8', 'RV6OjRGtny', 'a7BUsFJ0gQ',);
+mysqli_select_db($con,'RV6OjRGtny');
 ?>
 <html>
 	<head>
@@ -16,7 +13,7 @@ var_dump($consulta)
 			<select name='patente'>
 				<?php
 					//show invoices list as options
-					$query = mysqli_query($consulta,"select * from vehiculosfacturados");
+					$query = mysqli_query($con,"select * from vehiculosfacturados");
 					while($patente = mysqli_fetch_array($query)){
 						echo "<option value='".$patente['patente']."'>".$patente['patente']."</option>";
 					}
