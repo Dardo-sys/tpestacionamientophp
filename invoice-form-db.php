@@ -6,7 +6,7 @@ $objetoAccesoDato= AccesoDatos::dameUnObjetoAcceso();
 $consulta =$objetoAccesoDato->RetornarConsulta("select * from vehiculosfacturados");
 $consulta->execute();
 $datos=$consulta->fetchall(PDO::FETCH_ASSOC);
-
+var_dump($datos)
 ?>
 <html>
 	<head>
