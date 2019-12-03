@@ -1,7 +1,7 @@
 <?php
 //db connection
 $con = mysqli_connect('mysql:host=remotemysql.com;dbname=RV6OjRGtny;charset=utf8', 'RV6OjRGtny', 'a7BUsFJ0gQ',);
-mysqli_select_db($con,'istic2019');
+mysqli_select_db($con,'RV6OjRGtny');
 ?>
 <html>
 	<head>
