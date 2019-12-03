@@ -1,6 +1,10 @@
 <?php
 //db connection
-$con = mysqli_connect('mysql:host=remotemysql.com;dbname=RV6OjRGtny;charset=utf8', 'RV6OjRGtny', 'a7BUsFJ0gQ',);
+include 'accesoadatos.php';
+
+$objetoAccesoDato= AccesoDatos::dameUnObjetoAcceso();
+$con =$objetoAccesoDato->RetornarConsulta("select * from vehiculosfacturados");
+$con->execute();
 
 ?>
 <html>
