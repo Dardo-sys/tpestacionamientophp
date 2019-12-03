@@ -6,7 +6,7 @@ $con = mysqli_connect('mysql:host=remotemysql.com;dbname=RV6OjRGtny;charset=utf8
 
 
 //get invoices data
-$query = mysqli_query($con,"select * from vehiculosfacturados
+$query = mysqli_query($con,"select patente from vehiculosfacturados
 	
 	where
 	patente = '".$_GET['patente']."'");
