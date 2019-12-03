@@ -3,10 +3,10 @@ require('fpdf17/fpdf.php');
 
 //db connection
 $con = mysqli_connect('mysql:host=remotemysql.com;dbname=RV6OjRGtny;charset=utf8', 'RV6OjRGtny', 'a7BUsFJ0gQ',);
-
+mysqli_select_db($con,'RV6OjRGtny');
 
 //get invoices data
-$query = mysqli_query($con,"select patente from vehiculosfacturados
+$query = mysqli_query($con,"select * from vehiculosfacturados
 	
 	where
 	patente = '".$_GET['patente']."'");
