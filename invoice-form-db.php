@@ -1,12 +1,7 @@
 <?php
 //db connection
-include 'accesoadatos.php';
-
-$objetoAccesoDato= AccesoDatos::dameUnObjetoAcceso();
-$consulta =$objetoAccesoDato->RetornarConsulta("select * from vehiculosfacturados");
-$consulta->execute();
-$datos=$consulta->fetchall(PDO::FETCH_ASSOC);
-var_dump($datos)
+$con = mysqli_connect('mysql:host=remotemysql.com;dbname=RV6OjRGtny;charset=utf8', 'RV6OjRGtny', 'a7BUsFJ0gQ',);
+mysqli_select_db($con,'RV6OjRGtny');
 ?>
 <html>
 	<head>
@@ -18,8 +13,8 @@ var_dump($datos)
 			<select name='patente'>
 				<?php
 					//show invoices list as options
-					$consulta =$objetoAccesoDato->RetornarConsulta("select * from vehiculosfacturados");
-					while($patente = mysqli_fetch_array($consulta)){
+					$query = mysqli_query($con,"select * from vehiculosfacturados");
+					while($patente = mysqli_fetch_array($query)){
 						echo "<option value='".$patente['patente']."'>".$patente['patente']."</option>";
 					}
 				?>
