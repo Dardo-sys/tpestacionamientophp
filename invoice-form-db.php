@@ -5,7 +5,7 @@ include 'accesoadatos.php';
 $objetoAccesoDato= AccesoDatos::dameUnObjetoAcceso();
 $con =$objetoAccesoDato->RetornarConsulta("select * from vehiculosfacturados");
 $con->execute();
-$datos=$con->fetchall(PDO::FETCH_ASSOC);
+$query=$con->fetchall(PDO::FETCH_ASSOC);
 
 ?>
 <html>
